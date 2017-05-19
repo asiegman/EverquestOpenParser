@@ -102,6 +102,10 @@ namespace OpenParser.Subscriptions
             var skillUpSubscription = new SkillUpSubscription(logFile);
             skillUpSubscription.Matched += SkillUpSubscription_Matched;
             Subscriptions.Add(skillUpSubscription);
+
+            var whoSubscription = new WhoSubscription(logFile);
+            whoSubscription.Matched += WhoSubscription_Matched;
+            Subscriptions.Add(whoSubscription);
         }
 
 
@@ -268,6 +272,13 @@ namespace OpenParser.Subscriptions
         private void SkillUpSubscription_Matched(object sender, SkillUp e)
         {
             OnSkillUp?.Invoke(sender, e);
+        }
+
+        public event EventHandler<Who> OnWho;
+
+        private void WhoSubscription_Matched(object sender, Who e)
+        {
+            OnWho?.Invoke(sender, e);
         }
     }
 }

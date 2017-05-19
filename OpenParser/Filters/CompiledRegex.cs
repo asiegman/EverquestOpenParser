@@ -79,5 +79,8 @@ namespace OpenParser.Filters
 
         public static Regex SystemMessageRegex { get; } =
             new Regex(@"\A<SYSTEMWIDE_MESSAGE>: ?(.+?)$", RegexOptions.Compiled);
+
+        public static Regex WhoRegex { get; } =
+            new Regex(@"\A\[.*\] (?<name>\S+).*<(?<guild>.*)> ZONE: (?<zone>.*)$", RegexOptions.Compiled);
     }
 }

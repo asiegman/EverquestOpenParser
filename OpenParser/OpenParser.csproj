@@ -43,6 +43,7 @@
     <Compile Include="EventResults\Combat\DotDamageInfo.cs" />
     <Compile Include="EventResults\Combat\DamageShieldInfo.cs" />
     <Compile Include="EventResults\SkillUp.cs" />
+    <Compile Include="EventResults\Who.cs" />
     <Compile Include="Filters\Misc.cs" />
     <Compile Include="Filters\CompiledRegex.cs" />
     <Compile Include="Enums\FactionChanges.cs" />
@@ -64,6 +65,7 @@
     <Compile Include="Subscriptions\SkillUpSubscription.cs" />
     <Compile Include="Subscriptions\Spell\SpellDamageSubscription.cs" />
     <Compile Include="Subscriptions\LevelSubscription.cs" />
+    <Compile Include="Subscriptions\WhoSubscription.cs" />
     <Compile Include="Subscriptions\ZoneSubscription.cs" />
     <Compile Include="Subscriptions\Spell\DamageShieldSubscription.cs" />
     <Compile Include="Subscriptions\Spell\ImmunitySubscription.cs" />
